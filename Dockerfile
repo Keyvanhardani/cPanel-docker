@@ -14,4 +14,5 @@ RUN /usr/local/src/latest.sh --target /usr/local/src/cpanel/ --noexec
 RUN sed -i 's/check_hostname();/# check_hostname();/g' /usr/local/src/cpanel/install
 RUN cd /usr/local/src/cpanel/ && ./bootstrap --force
 
-EXPOSE 20 21 22 25 53 80 110 143 443 465 587 993 995 2077 2078 2082 2083 2086 2087 2095 3306CMD ["/usr/sbin/init"]
+EXPOSE 20 21 22 25 53 80 110 143 443 465 587 993 995 2077 2078 2082 2083 2086 2087 2095 3306
+CMD ["/usr/sbin/init"]
