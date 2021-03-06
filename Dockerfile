@@ -1,4 +1,4 @@
-FROM centos:8 
+FROM centos:7 
 MAINTAINER Keyvan <Keyvan@hardani.de> 
 
 ENV container docker 
