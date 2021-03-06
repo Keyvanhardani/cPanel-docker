@@ -1,4 +1,4 @@
-FROM centos:7 
+FROM centos:8 
 MAINTAINER Keyvan <Keyvan@hardani.de> 
 
 ENV container docker 
@@ -14,7 +14,7 @@ RUN yum -y install perl
 
 RUN wget -O /usr/local/src/latest.sh http://httpupdate.cpanel.net/latest
 RUN chmod +x /usr/local/src/latest.sh
-RUN /usr/local/src/latest.sh --target /usr/local/src/cpanel/ --no exec
+RUN /usr/local/src/latest.sh --target /usr/local/src/cpanel/ --noexec
 RUN sed -i 's/check_hostname();/# check_hostname();/g' /usr/local/src/cpanel/install
 RUN touch /etc/fstab
 RUN chmod 0640 /etc/fstab
